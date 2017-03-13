@@ -58,9 +58,12 @@ public class LinesEditView extends LinearLayout{
 
     private void init() {
         View view = LayoutInflater.from(mContext).inflate(R.layout.layout_lines_edit_view, this);
-        id_ll_multi = (LinearLayout) view.findViewById(R.id.id_ll_lines_edit_view);
         id_et_input = (EditText) view.findViewById(R.id.id_et_input);
         id_tv_input = (TextView) view.findViewById(R.id.id_tv_input);
+
+        if (this.getBackground()==null){
+            this.setBackgroundResource(R.drawable.selector_lines_edit_view_bg);
+        }
 
         id_et_input.addTextChangedListener(mTextWatcher);
         id_et_input.setHint(hintText);
@@ -84,9 +87,11 @@ public class LinesEditView extends LinearLayout{
         id_et_input.setOnFocusChangeListener(new OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                id_ll_multi.setSelected(b);
+                LinesEditView.this.setSelected(b);
             }
         });
+
+
     }
 
     private TextWatcher mTextWatcher =new TextWatcher() {
