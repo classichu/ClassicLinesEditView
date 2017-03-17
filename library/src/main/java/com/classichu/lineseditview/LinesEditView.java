@@ -246,4 +246,14 @@ public class LinesEditView extends LinearLayout {
         }
         return hintText;
     }
+
+    public void setMaxCount(int max_count) {
+        this.MAX_COUNT = max_count;
+        configCount();
+    }
+
+    public void setIgnoreCnOrEn(boolean ignoreCnOrEn) {
+        this.ignoreCnOrEn = ignoreCnOrEn;
+        configCount();
+    }
 }
