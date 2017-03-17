@@ -2,33 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/id_et_input"
-        android:textSize="16dp"
-        android:textColor="#DE000000"
-        android:background="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:gravity="top"
         android:hint="请输入文字描述…"
         android:inputType="textMultiLine"
         android:padding="10dp"
         android:selectAllOnFocus="true"
-        />
+        android:textColor="#DE000000"
+        android:textSize="16dp" />
 
     <TextView
         android:id="@+id/id_tv_input"
-        android:textSize="14dp"
-        android:textColor="#8A000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="7dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:text="100/100"/>
+        android:text="100/100"
+        android:textColor="#8A000000"
+        android:textSize="14dp" />
 </LinearLayout>
